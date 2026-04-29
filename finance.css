@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Finance Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 Personal Finance Tracker</h1>
+      <button id="modeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+      <div class="input-section card">
+        <h2>Add Transaction</h2>
+        <form id="transactionForm">
+          <input type="text" id="desc" placeholder="Description" required>
+          <input type="number" id="amount" placeholder="Amount" required>
+          <select id="category">
+            <option value="food">🍔 Food</option>
+            <option value="transport">🚗 Transport</option>
+            <option value="bills">💡 Bills</option>
+            <option value="entertainment">🎬 Entertainment</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+
+      <div class="dashboard-section card">
+        <h2>Monthly Summary</h2>
+        <canvas id="expenseChart"></canvas>
+
+        <div class="goal-tracker">
+          <h3>Savings Goal</h3>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p id="goalText">Saved: ₹0 / ₹5000</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
